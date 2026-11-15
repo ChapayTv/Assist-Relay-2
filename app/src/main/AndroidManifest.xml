@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Нужно, чтобы видеть список установленных приложений (Android 11+) -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@android:drawable/ic_btn_speak_now"
+        android:allowBackup="false"
+        android:theme="@style/AppTheme">
+
+        <!-- Экран настроек: выбор приложения-ассистента -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Невидимый переходник: ловит вызов ассистента и открывает выбранное приложение -->
+        <activity
+            android:name=".RelayActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+
+            <!-- Именно этот интент шлёт LibrePods при долгом нажатии на AirPod -->
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VOICE_COMMAND" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- ASSIST намеренно не регистрируем: он нужен как запасной путь к системному ассистенту -->
+        </activity>
+    </application>
+</manifest>
