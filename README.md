@@ -1,5 +1,8 @@
 # 🎧 Assist Relay 2
 
+<img width="1200" height="2670" alt="Screenshot_2026-11-15-23-31-56-277_me vladimir assistrelay2" src="https://github.com/user-attachments/assets/26581e0f-f590-466a-a500-a4f750ee202b" />
+
+
 **Assist Relay 2** — небольшое Android-приложение, которое позволяет запускать сторонних голосовых ассистентов с помощью длительного нажатия на blooetuth наушниках.
 
 Приложение создано как обходное решение проблемы [LibrePods #868](https://github.com/librepods-org/librepods/issues/868), из-за которой вместо запуска выбранного голосового помощника Android может открывать настройки ассистента.
