@@ -1,6 +1,7 @@
 # 🎧 Assist Relay 2
 
-<img width="1200" height="2670" alt="Screenshot_2026-11-15-23-31-56-277_me vladimir assistrelay2" src="https://github.com/user-attachments/assets/26581e0f-f590-466a-a500-a4f750ee202b" />
+<img width="720" height="1603" alt="assist_relay_720" src="https://github.com/user-attachments/assets/15d7189e-fb37-4bb5-bab7-3ad104bc3ebe" />
+
 
 
 **Assist Relay 2** — небольшое Android-приложение, которое позволяет запускать сторонних голосовых ассистентов с помощью длительного нажатия на blooetuth наушниках.
